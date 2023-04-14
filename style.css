@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: #000;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+@font-face {
+    font-family: "Arial-Italic";
+    src: url(./assets/fonts/arial-italic.ttf);
+}
+@font-face {
+    font-family: "Arial-Regular";
+    src: url(../assets/fonts/arial-regular.ttf);
+}
+@font-face {
+    font-family: "Georgia-Italic";
+    src: url(../assets/fonts/georgia-italic.ttf);
+}
+@font-face {
+    font-family: "Georgia-Regular";
+    src: url(../assets/fonts/georgia-regular.ttf);
+}
+@font-face {
+    font-family: "Georgia-Bold";
+    src: url(../assets/fonts/georgia-bold.ttf);
+}
+/*-----------------------------------------------------------*/
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container {
+    max-width: 1280px;
+    margin: 0px auto;
+    padding: 0 40px;
+}
+.header__container {
+    padding: 30px 0;
+}
+.header__logo img {
+    width: 100px;
+    height: 100px;
+}
+.header__logo h1 {
+    font-family: 'Georgia-Bold';  
+    font-size: 40px;
+    color: rgb(0,117,184);
+}
+
+p {
+    font-family: 'Georgia-Italic';
+    color: red;
+}
