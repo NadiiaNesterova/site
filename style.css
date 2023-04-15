@@ -39,6 +39,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: auto;
+  width: 100%;
 }
 
 @font-face {
@@ -74,8 +75,51 @@ body {
     padding: 0 40px;
 }
 .header__container {
-    padding: 30px 0;
+    padding-top: 30px;
 }
+.header__first {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #ccffff;
+  }
+  .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .header__second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffcc;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+  .language-switcher__button {
+    font-size: 14px;
+    line-height: 16px;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .language-switcher__button:hover {
+    color: #0088cc;
+  }
+  
 .header__logo img {
     width: 100px;
     height: 100px;
@@ -85,8 +129,86 @@ body {
     font-size: 40px;
     color: rgb(0,117,184);
 }
+@media (max-width: 770px) {
+/* Стили для меню */
+.menu__body {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 300px;
+    background-color: #fff;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu__body._active {
+    right: 0;
+  }
+  
+  .menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu__item {
+    margin-bottom: 10px;
+  }
+  
+  .menu__link {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+  }
 
-p {
-    font-family: 'Georgia-Italic';
-    color: red;
-}
+  
+/* Стили для иконки бургер-меню */
+.menu__icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  
+  .menu__icon span,
+  .menu__icon span:before,
+  .menu__icon span:after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu__icon span:before {
+    content: "";
+    top: -10px;
+  }
+  
+  .menu__icon span:after {
+    content: "";
+    bottom: -10px;
+  }
+  
+  .menu__icon._active span {
+    background-color: transparent;
+  }
+  
+  .menu__icon._active span:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  
+  .menu__icon._active span:after {
+    transform: rotate(45deg);
+    bottom: 0;
+  }
+  }
+  

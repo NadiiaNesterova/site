@@ -9,12 +9,25 @@
     <link href="./style.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="./assets/icons/favicon.ico">
 </head>
-
 <body>
     <div class="wrapper">
         <!-- Header -->
         <header class="header">
             <div class="header__container _container">
+                <div class="header__first">
+                    <div class="contact-info">
+                        <a href="tel:+380983302595" class="contact-info__link">+38 (098) 330-25-95</a>
+                        <a href="mailto:otar@ukr.net" class="contact-info__link">otar@ukr.net</a>
+                        <a href="https://www.instagram.com/basil.ua/" target="_blank" class="contact-info__link"><i class="fab fa-instagram"></i><img alt="inst" src="./assets/icons/inst.svg"></a>
+                      </div>
+                      
+                      <div class="language-switcher">
+                        <button class="language-switcher__button" data-lang="ukr">Українська</button>
+                        <button class="language-switcher__button" data-lang="rus">Русский</button>
+                      </div>
+                      
+                </div>
+                <div class="header__second">
                 <div class="header__logo">
                     <img alt="logo" src="./assets/icons/logo.png">
                     <h1>Вікна</h1>
@@ -32,7 +45,7 @@
                                 <a href="#" class="menu__link">Галерея</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Прайс</a>
+                                <a href="#" class="menu__link">Калькулятор</a>
                             </li>
                             <li class="menu__item">
                                 <a href="#" class="menu__link">Контакты</a>
@@ -40,12 +53,13 @@
                         </ul>
                     </nav>
             </div>
+        </div>
             </div>
         </header>
         <!-- Main -->
         <main class="main">
             <div class="main__container _container">
-                <p>Hello!!!</p>world
+                
             </div>
         </main>
         <!-- Footer -->
@@ -55,6 +69,7 @@
             </div>
         </footer>
         <script src="./burger.js"></script>
+        <script src="./language.js"></script>
     </div>
 </body>
 
