@@ -74,14 +74,23 @@ body {
     margin: 0px auto;
     padding: 0 40px;
 }
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    background: #ccffff;
+}
 .header__container {
     padding-top: 30px;
+    
 }
 .header__first {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: #ccffff;
+    border-bottom: 1px solid #ccc;
   }
   .contact-info {
     display: flex;
@@ -92,7 +101,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffcc;
+    width: 100%;
   }
   .header__logo {
     display: flex;
@@ -129,6 +138,38 @@ body {
     font-size: 40px;
     color: rgb(0,117,184);
 }
+.contact-info__link img {
+    width: 30px;
+    height: 30px;
+}
+.contact-info a:link {
+    color: black;
+  }
+.contact-info__link {
+    font-family: 'Georgia-Bold';  
+    font-size: 20px;
+}
+  
+.phone-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: phoneRing 0.8s ease-in-out infinite;
+  }
+  
+  @keyframes phoneRing {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(15deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-15deg);
+    }
+  }
+  
 @media (max-width: 770px) {
 /* Стили для меню */
 .menu__body {
